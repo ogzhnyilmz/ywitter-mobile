@@ -83,10 +83,10 @@ function deleteYwit(id) {
 function handleLikeClick(event) {
     event.preventDefault();
     const id = event.target.closest(`.heart-btn`).dataset.id;
-    toggleLike(id);
+    isLike(id);
 }
 
-function toggleLike(id) {
+function isLike(id) {
     const ywit = ywits.find(ywit => ywit.id == id);
     if (ywit) {
         ywit.isLiked = !ywit.isLiked;
